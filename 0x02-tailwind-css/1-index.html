@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic CSS Grid Layout</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Responsive grid for smaller screens */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body >
-    <header>
-        <h1>Basic CSS Grid Layout</h1>
+<body class="p-4">
+    <header class="mb-4">
+        <h1 class="text-3xl font-bold">Basic CSS Grid Layout</h1>
     </header>
 
-    <main>
-        <div>Column 1</div>
-        <div>Column 2</div>
-        <div>Column 3</div>
+
+    <main class="grid grid-cols-3 gap-4">
+        <div class="bg-blue-200 p-4">Column 1</div>
+        <div class="bg-blue-300 p-4">Column 2</div>
+        <div class="bg-blue-400 p-4">Column 3</div>
     </main>
-   </body>
+</body>
 </html>
